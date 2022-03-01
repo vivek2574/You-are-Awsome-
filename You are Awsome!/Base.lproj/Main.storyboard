@@ -25,7 +25,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zuM-x2-vfc">
-                                <rect key="frame" x="0.0" y="365" width="189" height="41"/>
+                                <rect key="frame" x="0.0" y="238" width="189" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Show Message">
@@ -36,7 +36,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Rk-Zd-6vv">
-                                <rect key="frame" x="201" y="371" width="205" height="35"/>
+                                <rect key="frame" x="200" y="244" width="205" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Show Another Message">
@@ -46,11 +46,16 @@
                                     <action selector="messageButton1Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I3L-gQ-tzw"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image2-1" translatesAutoresizingMaskIntoConstraints="NO" id="z4F-2w-sqP">
+                                <rect key="frame" x="20" y="287" width="374" height="575"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="imageView" destination="z4F-2w-sqP" id="d3Z-xu-H2E"/>
                         <outlet property="messageLabel" destination="AGF-E6-jeV" id="Oha-dh-cfC"/>
                     </connections>
                 </viewController>
@@ -60,6 +65,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="image2-1" width="3000" height="4000"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

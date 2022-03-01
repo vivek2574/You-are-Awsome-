@@ -11,6 +11,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var messageLabel: UILabel!
     
+    @IBOutlet weak var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("👍 viewDidLoad has run!")
@@ -23,6 +25,7 @@ class ViewController: UIViewController {
         messageLabel.text = "You are Awsome!"
         messageLabel.textColor = .blue
         messageLabel.textAlignment = .left
+        imageView.image = UIImage(named: "image2")
     }
 
     @IBAction func messageButton1Pressed(_ sender: UIButton) {
@@ -30,6 +33,7 @@ class ViewController: UIViewController {
         messageLabel.text = "You are Great!"
         messageLabel.textColor = .systemRed
         messageLabel.textAlignment = .right
+        imageView.image = UIImage(named: "image3")
     }
     
 }
