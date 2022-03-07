@@ -17,15 +17,30 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         print("👍 viewDidLoad has run!")
         messageLabel.text = "Fabulous? Its You!"
-    }
+    	}
 
     @IBAction func messageButtonPressed(_ sender: UIButton) {
         
+        let awesomeMessage = "You are Awsome"
+        let greatMessage = "You are great"
+        let bombMessage = "You are a Bomb"
+        
     print("😎 Show Message button was pressed!")
-        messageLabel.text = "You are Awsome!"
-        messageLabel.textColor = .blue
-        messageLabel.textAlignment = .left
-        imageView.image = UIImage(named: "image2")
+        if messageLabel.text == awesomeMessage {
+            messageLabel.text = greatMessage
+            messageLabel.textColor = .red
+            messageLabel.textAlignment = .right
+            imageView.image = UIImage(named: "image3")
+        } else if messageLabel.text == greatMessage {
+            messageLabel.text = bombMessage
+            messageLabel.textColor = .blue
+            messageLabel.textAlignment = .left
+            imageView.image = UIImage(named: "image2")
+        }
+        else {
+            messageLabel.text = awesomeMessage
+            imageView.image = UIImage(named: "image4")
+        }
     }
 
     @IBAction func messageButton1Pressed(_ sender: UIButton) {
