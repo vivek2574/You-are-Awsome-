@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     
     var imageNumber = 0
     
+    var messages = ["You are fabulous!", "You are hardworking!", "You are committed!", "Appreciate your focus!", "You have amazing talent", "What a thought", "You are great!", "What a talent!", "Very creative!", "You are amazing!" ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,17 +27,17 @@ class ViewController: UIViewController {
     @IBAction func messageButtonPressed(_ sender: UIButton) {
         
         print(imageNumber)
-        imageNumber = imageNumber + 1
+        imageNumber += 1
         
-        if imageNumber == 10 {
+        if imageNumber == messages.count {
             imageNumber = 0
         }
         
         let imageName = "image" + String(imageNumber)
-            messageLabel.text = "You are Awesome"
-//            imageView.image = UIImage(named: imageName)
+            messageLabel.text = messages[imageNumber]
+            imageView.image = UIImage(named: imageName)
         // String Interpolation method:
-        imageView.image = UIImage(named: "image\(imageNumber)")
+//        imageView.image = UIImage(named: "image\(imageNumber)")
 
 //
         
